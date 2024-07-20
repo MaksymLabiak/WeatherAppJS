@@ -21,6 +21,8 @@ weatherForm.addEventListener("submit", async event => {
     } else {
         displayError("Please enter a city");
     }
+
+    cityInput.value = "";
 });
 
 async function getWeatherData(city) {
@@ -70,8 +72,8 @@ function displayWeatherInfo(data) {
     card.appendChild(tempDisplay);
     card.appendChild(humidityDisplay);
     card.appendChild(conditionDisplay);
-    card.appendChild(weatherDisplay);
     card.appendChild(conditionDisplay);
+    card.appendChild(weatherDisplay);
 }
 
 function getWeatherEnoji(weatherId) {
